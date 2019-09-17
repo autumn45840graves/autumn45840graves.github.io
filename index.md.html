@@ -4,78 +4,14 @@
     <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="https://autumn45840graves.github.io/style.css.txt">
     <script type="text/javascript">
-
-            
-
-        function myfunction() {
-            if (document.selection.primary.value == "") {
-                alert("Enter some value!");
-                return;
-            }
-            else if (document.selection.secondary.value == "") {
-                alert("Enter some value!");
-                return;
-            }
-            else if (document.selection.font.value == "") {
-                alert("Enter some value!");
-                return;
-            }
-            else if (document.selection.fontcolor.value == "") {
-                alert("Enter some value!");
-                return;
-            }
-            else {
-                var primaryvalue = escape(document.selection.primary.value);
-                var secondaryvalue = escape(document.selection.secondary.value);
-                var fontvalue = escape(document.selection.font.value);
-                var fontcolorvalue = escape(document.selection.fontcolor.value);
-
-                document.cookie = "primary=" + primaryvalue;
-                document.cookie = "seconary=" + secondaryvalue;
-                document.cookie = "font=" + fontvalue;
-                document.cookie = "fontcolor=" + fontcolorvalue;
-
-                document.write("primary=" + primaryvalue);
-                document.write("secondary=" + secondaryvalue);
-                document.write("font=" + fontvalue);
-                document.write("fontcolor=" + fontcolorvalue);
-
-                alert(primaryvalue);
-                alert(secondaryvalue);
-                alert(fontvalue);
-                alert(fontcolorvalue);
-            }
-            }
+        
+        
 
     </script>
 </head>
 <body>
 
     <h1>Autumn's chart</h1>
-
-
-    <form name="selection" action="#" onsubmit="myfunction()">
-        <p style="text-align:center;">
-            Choose Primary Color:
-            <input type="color" name="primary" value="#FFA500" onsubmit="changePrimary"/>
-            Choose Secondary Color:
-            <input type="color" name="secondary" value="#1e90ff" onsubmit="changeSecondary"/>
-        </p>
-        <p style="text-align:center;">
-            Choose Font Type:
-            <select name="font" onsubmit="changeFont">
-                <option value="Arial">Arial</option>
-                <option value="Times">Times</option>
-                <option value="Verdana">Verdana</option>
-                <option value="Georgia">Georgia</option>
-            </select>
-            Choose Font Color:
-            <input type="color" name="fontcolor" value="#ffffff" onsubmit="changeFontColor" />
-        </p>
-        
-        <p><input type="submit" value="Submit" /></p>
-    </form>
-
 
     <div class="flexmonth">
         <div class="selectedyear">2019</div>
