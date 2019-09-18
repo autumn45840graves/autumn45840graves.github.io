@@ -9,6 +9,17 @@
         getCookie(secondaryvalue);
         getCookie(fontvalue);
         getCookie(fontcolorvalue);
+        
+        document.getElementByClass("selectedyear").style.backgroundColor = primaryvalue;
+        document.getElementByClass("more").style.backgroundColor = primaryvalue;
+        document.getElementByClass("dayname").style.backgroundColor = primaryvalue;
+        document.getElementByClass("monthfooter").style.backgroundColor = primaryvalue;
+        
+        document.getElementByClass("selectedmonth").style.backgroundColor = secondaryvalue;
+        document.getElementByClass("timebox").style.backgroundColor = secondaryvalue;
+        
+        document.div.style.fontFamily = fontvalue;
+        document.div.style.color = fontcolorvalue;
 
     </script>
     <style>
