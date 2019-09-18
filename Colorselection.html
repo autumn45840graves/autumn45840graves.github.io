@@ -24,10 +24,10 @@
             }
             else {
                 var expires = (new Date(Date.now()+ 31536000000)).toUTCString();
-                var primaryvalue = escape(document.selection.primary.value);
-                var secondaryvalue = escape(document.selection.secondary.value);
-                var fontvalue = escape(document.selection.font.value);
-                var fontcolorvalue = escape(document.selection.fontcolor.value);
+                var primaryvalue = document.selection.primary.value;
+                var secondaryvalue = document.selection.secondary.value;
+                var fontvalue = document.selection.font.value;
+                var fontcolorvalue = document.selection.fontcolor.value;
                 document.cookie = "primary=" + primaryvalue;expires=" + expires + 31536000000) + ";path=/;"
                 document.cookie = "seconary=" + secondaryvalue;expires=" + expires + 31536000000) + ";path=/;"
                 document.cookie = "font=" + fontvalue;expires=" + expires + 31536000000) + ";path=/;"
