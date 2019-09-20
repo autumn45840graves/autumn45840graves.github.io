@@ -34,7 +34,15 @@
                 document.cookie = "fontcolor=" + fontcolorvalue;expires=" + expires + 31536000000) + path=/";
             }
             }
-        
+            getcookie(primaryvalue);
+            getcookie(secondaryvalue);
+            getcookie(fontvalue);
+            getcookie(fontcolorvalue);
+            
+            alert(primaryvalue);
+            alert(secondaryvalue);
+            alert(fontvalue);
+            alert(fontcolorvalue);
        
         document.getElementByClassName("selectedyear").style.backgroundColor = primaryvalue;
         document.getElementByClassName("more").style.backgroundColor = primaryvalue;
