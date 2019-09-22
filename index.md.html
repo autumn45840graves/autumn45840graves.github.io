@@ -34,10 +34,7 @@
                 document.cookie = "fontcolor=" + fontcolorvalue;expires=" + expires + 31536000000) + path=/";
             }
             }
-            getcookie(primaryvalue);
-            getcookie(secondaryvalue);
-            getcookie(fontvalue);
-            getcookie(fontcolorvalue);
+            allCookies = document.cookie;
             
             alert(primaryvalue);
             alert(secondaryvalue);
