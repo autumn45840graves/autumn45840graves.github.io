@@ -4,37 +4,18 @@
     <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript">
-        function myfunction() {
-            function myfunction() {
-            if (document.selection.primary.value == "") {
-                alert("Enter some value!");
-                return;
-            }
-            else if (document.selection.secondary.value == "") {
-                alert("Enter some value!");
-                return;
-            }
-            else if (document.selection.font.value == "") {
-                alert("Enter some value!");
-                return;
-            }
-            else if (document.selection.fontcolor.value == "") {
-                alert("Enter some value!");
-                return;
-            }
-            else {
-                var expires = (new Date(Date.now()+ 31536000000)).toUTCString();
-                var primaryvalue = document.selection.primary.value;
-                var secondaryvalue = document.selection.secondary.value;
-                var fontvalue = document.selection.font.value;
-                var fontcolorvalue = document.selection.fontcolor.value;
-                document.cookie = "primary=" + primaryvalue;expires=" + expires + 31536000000) + path=/";
-                document.cookie = "seconary=" + secondaryvalue;expires=" + expires + 31536000000) + path=/";
-                document.cookie = "font=" + fontvalue;expires=" + expires + 31536000000) + path=/";
-                document.cookie = "fontcolor=" + fontcolorvalue;expires=" + expires + 31536000000) + path=/";
-            }
-            }
-            allCookies = document.cookie;
+        function ReadCookie() {
+               var allcookies = document.cookie;
+               document.write ("All Cookies : " + allcookies );
+               
+               // Get all the cookies pairs in an array
+               cookiearray = allcookies.split(';');
+               
+               // Now take key value pair out of this array
+               for(var i=0; i<cookiearray.length; i++) {
+                  name = cookiearray[i].split('=')[0];
+                  value = cookiearray[i].split('=')[1];
+                  document.write ("Key is : " + name + " and Value is : " + value);
             
             alert(primaryvalue);
             alert(secondaryvalue);
