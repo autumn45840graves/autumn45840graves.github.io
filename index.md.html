@@ -3,42 +3,7 @@
 <head>
     <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript">
-        function getCookie(cname) {
-            var name = cname + "=";
-            var decodedCookie = decodeURIComponent(document.cookie);
-            var ca = decodedCookie.split(';');
-            for(var i = 0; i <ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-            return "";
-        }
-        
-        //get color from cookie and put in variables
-        var primaryvalue = getCookie("primary");
-        var secondaryvalue = getCookie("secondary");
-        var fontvalue = getCookie("font");
-        var fontcolorvalue = getCookie("fontcolor");
-        
-        alert(primaryvalue);
-        alert(secondaryvalue);
-        alert(fontvalue);
-        alert(fontcolorvalue);
-        
-        // overriding the styles with javascript
-        document.getElementById("primary").style.backgroundColor = primaryvalue;
-        
-        document.getElementById("secondary").style.backgroundColor = secondaryvalue;
-       
-        document.div.style.fontFamily = fontvalue;
-        document.div.style.color = fontcolorvalue;
-    </script>
+    
 </link>   
 </head>
 <body>
@@ -170,7 +135,42 @@
     <div class="monthfooter" id="primary"> </div>
 
     <p style="text-align:center;"><button onclick="location.href='https://autumn45840graves.github.io/Colorselection.html';" />Color Selection</p>
-
+    <script type="text/javascript">
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for(var i = 0; i <ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+            return "";
+        }
+        
+        //get color from cookie and put in variables
+        var primaryvalue = getCookie("primary");
+        var secondaryvalue = getCookie("secondary");
+        var fontvalue = getCookie("font");
+        var fontcolorvalue = getCookie("fontcolor");
+        
+        alert(primaryvalue);
+        alert(secondaryvalue);
+        alert(fontvalue);
+        alert(fontcolorvalue);
+        
+        // overriding the styles with javascript
+        document.getElementById("primary").style.backgroundColor = primaryvalue;
+        
+        document.getElementById("secondary").style.backgroundColor = secondaryvalue;
+       
+        document.div.style.fontFamily = fontvalue;
+        document.div.style.color = fontcolorvalue;
+    </script>
 
 </body>
 </html>
