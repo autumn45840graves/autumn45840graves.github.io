@@ -20,23 +20,23 @@
             return "";
         }
         
-        
+        //get color from cookie and put in variables
         var primaryvalue = getCookie("primary");
-        document.getCookie("primary").style.backgroundColor = "primary";
-        document.getCookie("primary").style.backgroundColor = "primary";
-        document.getCookie("primary").style.backgroundColor = "primary";
-        document.getCookie("primary").style.backgroundColor = "primary";
-        
         var secondaryvalue = getCookie("secondary");
-        document.getCookie("secondary").style.backgroundColor = "secondary";
-        document.getCookie("secondary").style.backgroundColor = "secondary";
-        
         var fontvalue = getCookie("font");
-        document.div.style.fontFamily = "font";
-        
         var fontcolorvalue = getCookie("fontcolor");
-        document.div.style.color = "fontcolor";
-
+        
+        // overriding the styles with javascript
+        document.getElementByClassName("selectedyear").style.backgroundColor = primaryvalue;
+        document.getElementByClassName("more").style.backgroundColor = primaryvalue;
+        document.getElementByClassName("dayname").style.backgroundColor = primaryvalue;
+        document.getElementByClassName("monthfooter").style.backgroundColor = primaryvalue;
+       
+        document.getElementByClassName("selectedmonth").style.backgroundColor = secondaryvalue;
+        document.getElementByClassName("timebox").style.backgroundColor = secondaryvalue;
+       
+        document.div.style.fontFamily = fontvalue;
+        document.div.style.color = fontcolorvalue;
     </script>
 </link>   
 </head>
