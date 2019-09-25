@@ -9,8 +9,6 @@
 <body>
     <div class="font">
 
-    <h1>Autumn's chart</h1>
-
     <div class="flexmonth">
         <div class="selectedyear" id="primary" >2019</div>
         <div class="selectedmonth" id="secondary">July</div>
@@ -164,11 +162,19 @@
         alert(fontvalue);
         alert(fontcolorvalue);
         
-        const x = document.getElementsByClassName("selectedyear");
-        for (let e of x) { e.style.backgroundColor = primaryvalue; }
+        const a = document.getElementsByClassName("selectedyear");
+        for (let e of a) { e.style.backgroundColor = primaryvalue; }
         
-        const y = document.getElementsByClassName("font");
-        for (let e of y) { e.style.color = fontcolorvalue; }
+        const b = document.getElementsByClassName("selectedmonth");
+        for (let e of b) { e.style.backgroundColor = secondaryvalue; }
+        
+        const c = document.getElementsByClassName("more");
+        for (let e of c) { e.style.backgroundColor = primaryvalue; }
+        
+        const d = document.getElementsByClassName("selectedyear");
+        for (let e of d) { e.style.backgroundColor = primaryvalue; }
+        
+        
         
         // overriding the styles with javascript
        // document.getElementById("primary").style.backgroundColor = primaryvalue;
