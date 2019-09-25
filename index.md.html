@@ -165,7 +165,9 @@
         
         const x = document.getElementsByClassName("selectedyear");
         for (let e of x) { e.style.backgroundColor = primaryvalue; }
-
+        
+        const y = document.getElementsByTagName("body");
+        for (let e of y) { e.style.color = fontcolorvalue; }
         
         // overriding the styles with javascript
        // document.getElementById("primary").style.backgroundColor = primaryvalue;
