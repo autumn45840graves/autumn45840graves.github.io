@@ -1,4 +1,13 @@
-        
+        .button{
+            border-radius: 15px 15px 15px 15px;
+            background: DodgerBlue;
+            color: white;
+            width: 60px;
+            height: 40px;
+            margin: 5px;
+            text-align: center;
+            vertical-align: middle;
+        }
 
         .selectedyear {
             height: 25px;
