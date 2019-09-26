@@ -168,23 +168,26 @@
         const b = document.getElementsByClassName("selectedmonth");
         for (let e of b) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        const c = document.getElementsByClassName("more");
-        for (let e of c) { e.style.backgroundColor = primaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
+         const c = document.getElementsByClassName("monthname");
+        for (let e of c) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        const d = document.getElementsByClassName("dayname");
+        const d = document.getElementsByClassName("more");
         for (let e of d) { e.style.backgroundColor = primaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        const e = document.getElementsByClassName("date1");
-        for (let e of e) { e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
+        const e = document.getElementsByClassName("dayname");
+        for (let e of e) { e.style.backgroundColor = primaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        const f = document.getElementsByClassName("date2");
+        const f = document.getElementsByClassName("date1");
         for (let e of f) { e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        const g = document.getElementsByClassName("timebox");
-        for (let e of g) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
+        const g = document.getElementsByClassName("date2");
+        for (let e of g) { e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        const h = document.getElementsByClassName("monthfooter");
-        for (let e of h) { e.style.backgroundColor = primaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
+        const h = document.getElementsByClassName("timebox");
+        for (let e of h) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
+        
+        const i = document.getElementsByClassName("monthfooter");
+        for (let e of i) { e.style.backgroundColor = primaryvalue;}
         
         // overriding the styles with javascript
        // document.getElementById("primary").style.backgroundColor = primaryvalue;
