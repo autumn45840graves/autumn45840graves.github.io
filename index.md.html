@@ -18,14 +18,14 @@
                
              </select>
         </div>
-        <div class="monthname">July</div>
-        <div class="monthname">August</div>
-        <div class="monthname">September</div>
-        <div class="monthname">October</div>
-        <div class="monthname">November</div>
-        <div class="monthname">December</div>
-        <div class="monthname">January</div>
-        <div class="more">MORE ></div>
+        <button onclick="July()" class="monthname">July</button>
+        <button onclick="August()" class="monthname">August</button>
+        <button onclick="September()" class="monthname">September</button>
+        <button onclick="October()" class="monthname">October</button>
+        <button onclick="November()" class="monthname">November</button>
+        <button onclick="December()" class="monthname">December</button>
+        <button onclick="January()" class="monthname">January</button>
+        <button class="more">MORE ></button>
     </div>
 
     <div class="flexday">
@@ -200,13 +200,30 @@
         const k = document.getElementsByClassName("button");
         for (let e of k) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        // overriding the styles with javascript
-       // document.getElementById("primary").style.backgroundColor = primaryvalue;
-        
-        //document.getElementById("secondary").style.backgroundColor = secondaryvalue;
-       
-       // document.body.style.fontFamily = fontvalue;
-       // document.body.style.color = fontcolorvalue;
+        function changeColor(color) { 
+            document.getElementsByClassName("monthname").style.backgroundColor = color; 
+        }     
+        function July() { 
+            changeColor(secondaryvalue);
+        }
+        function August() { 
+            changeColor(secondaryvalue);
+        }     
+        function September() { 
+            changeColor(secondaryvalue);
+        }
+        function October() { 
+            changeColor(secondaryvalue);
+        }
+        function November() { 
+            changeColor(secondaryvalue);
+        }
+        function December() { 
+            changeColor(secondaryvalue);
+        }
+        function January() { 
+            changeColor(secondaryvalue);
+        }
     </script>
 
 </body>
