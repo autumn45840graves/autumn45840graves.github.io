@@ -18,14 +18,14 @@
                
              </select>
         </div>
-        <button onclick="July()" class="monthname" a href="index.md.html?Month=July">July</button>
-        <button onclick="August()" class="monthname" a href="index.md.html?Month=August">August</button>
-        <button onclick="September()" class="monthname" a href="index.md.html?Month=September">September</button>
-        <button onclick="October()" class="monthname" a href="index.md.html?Month=Octomber">October</button>
-        <button onclick="November()" class="monthname" a href="index.md.html?Month=November">November</button>
-        <button onclick="December()" class="monthname" a href="index.md.html?Month=December">December</button>
-        <button onclick="January()" class="monthname" a href="index.md.html?Month=January">January</button>
-        <button class="more">MORE ></button>
+        <button onclick="ChangeColor" class="monthname" id= "July" a href="index.md.html?Month=July">July</button>
+        <button onclick="ChangeColor" class="monthname" id= "August" a href="index.md.html?Month=August">August</button>
+        <button onclick="ChangeColor" class="monthname" id= "September" a href="index.md.html?Month=September">September</button>
+        <button onclick="ChangeColor" class="monthname" id= "October" a href="index.md.html?Month=Octomber">October</button>
+        <button onclick="ChangeColor" class="monthname" id= "November" a href="index.md.html?Month=November">November</button>
+        <button onclick="ChangeColor" class="monthname" id= "December" a href="index.md.html?Month=December">December</button>
+        <button onclick="ChangeColor" class="monthname" id= "January" a href="index.md.html?Month=January">January</button>
+        <button class="more" onclick="ChangeText()">MORE ></button>
     </div>
 
     <div class="flexday">
@@ -200,30 +200,12 @@
         const k = document.getElementsByClassName("button");
         for (let e of k) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        function changeColor(color) { 
-            document.getElementsByClassName("monthname").style.backgroundColor = color; 
+        function ChangeColor(secondaryvalue) { 
+            document.getElementsByClassName("monthname").style.backgroundColor = secondaryvalue; 
         }     
-        function July() { 
-            changeColor(secondaryvalue);
-        }
-        function August() { 
-            changeColor(secondaryvalue);
-        }     
-        function September() { 
-            changeColor(secondaryvalue);
-        }
-        function October() { 
-            changeColor(secondaryvalue);
-        }
-        function November() { 
-            changeColor(secondaryvalue);
-        }
-        function December() { 
-            changeColor(secondaryvalue);
-        }
-        function January() { 
-            changeColor(secondaryvalue);
-        }
+      
+        
+
     </script>
 
 </body>
