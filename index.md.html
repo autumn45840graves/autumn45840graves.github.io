@@ -25,7 +25,7 @@
         <button onclick="ChangeColor" class="monthname" id= "November" a href="index.md.html?Month=November">November</button>
         <button onclick="ChangeColor" class="monthname" id= "December" a href="index.md.html?Month=December">December</button>
         <button onclick="ChangeColor" class="monthname" id= "January" a href="index.md.html?Month=January">January</button>
-        <button class="more" onclick="ChangeText()">MORE ></button>
+        <button class="more" onclick="NextWord()">MORE ></button>
     </div>
 
     <div class="flexday">
@@ -212,7 +212,14 @@
                 count = 0;
             }
         }
-
+        
+        var NextWord = (function() {
+        var wordArray = ['January','Febuary','March','April','May','June','July','August','September','October','November','December'];
+        var count = -1;
+        return function() {
+        return wordArray[++count % wordArray.length];
+        }
+        }());
     </script>
 
 </body>
