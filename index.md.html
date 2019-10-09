@@ -17,13 +17,13 @@
                
              </select>
         </div>
-        <button onclick="document.getElementsById("July").style.backgroundColor = secondaryvalue;" class="monthname" id= "July" >July</button>
-        <button onclick="document.getElementsById("August").style.backgroundColor = secondaryvalue;" class="monthname" id= "August" >August</button>
-        <button onclick="document.getElementsById("September").style.backgroundColor = secondaryvalue;" class="monthname" id= "September" >September</button>
-        <button onclick="document.getElementsById("October").style.backgroundColor = secondaryvalue;" class="monthname" id= "October" >October</button>
-        <button onclick="document.getElementsById("November").style.backgroundColor = secondaryvalue;" class="monthname" id= "November" >November</button>
-        <button onclick="document.getElementsById("December").style.backgroundColor = secondaryvalue;" class="monthname" id= "December" >December</button>
-        <button onclick="document.getElementsById("January").style.backgroundColor = secondaryvalue;" class="monthname" id= "January" >January</button>
+        <button onclick="ChangeColor()" class="monthname" id= "July" >July</button>
+        <button onclick="ChangeColor()" class="monthname" id= "August" >August</button>
+        <button onclick="ChangeColor()" class="monthname" id= "September" >September</button>
+        <button onclick="ChangeColor()" class="monthname" id= "October" >October</button>
+        <button onclick="ChangeColor()" class="monthname" id= "November" >November</button>
+        <button onclick="ChangeColor()" class="monthname" id= "December" >December</button>
+        <button onclick="ChangeColor()" class="monthname" id= "January" >January</button>
         <button class="more" onclick="NextWord()">MORE ></button>
     </div>
     <div class="flexday">
@@ -168,6 +168,7 @@
        
         const b = document.getElementsByClassName("selectedmonth");
         for (let e of b) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
+        
         const c = document.getElementsByClassName("monthname");
         for (let e of c) { e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
        
@@ -191,20 +192,12 @@
        
         const k = document.getElementsByClassName("button");
         for (let e of k) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
-       
-        var count = 1;
-        function ChangeColor(btn, color) {
-        var property = document.getElementById(btn);
-            if (count == 0) {
-                property.style.backgroundColor = secondaryvalue;
-                count = 1;        
-            }
-            else {
-                property.style.backgroundColor = "#7FFF00";
-                count = 0;
-            }
+        
+        function ChangeColor(){
+            const l = document.getElementsByClassName("monthfooter");
+            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
         }
-       
+        
         var NextWord = (function() {
         var wordArray = ['January','Febuary','March','April','May','June','July','August','September','October','November','December'];
         var count = -1;
