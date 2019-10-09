@@ -17,13 +17,13 @@
                
              </select>
         </div>
-        <button onclick="ChangeColor()" class="monthname" id= "July" >July</button>
-        <button onclick="ChangeColor()" class="monthname" id= "August" >August</button>
-        <button onclick="ChangeColor()" class="monthname" id= "September" >September</button>
-        <button onclick="ChangeColor()" class="monthname" id= "October" >October</button>
-        <button onclick="ChangeColor()" class="monthname" id= "November" >November</button>
-        <button onclick="ChangeColor()" class="monthname" id= "December" >December</button>
-        <button onclick="ChangeColor()" class="monthname" id= "January" >January</button>
+        <button onclick="ChangeColor_July()" class="monthname" id= "July" >July</button>
+        <button onclick="ChangeColor_August()" class="monthname" id= "August" >August</button>
+        <button onclick="ChangeColor_September()" class="monthname" id= "September" >September</button>
+        <button onclick="ChangeColor_October()" class="monthname" id= "October" >October</button>
+        <button onclick="ChangeColor_November()" class="monthname" id= "November" >November</button>
+        <button onclick="ChangeColor_December()" class="monthname" id= "December" >December</button>
+        <button onclick="ChangeColor_January()" class="monthname" id= "January" >January</button>
         <button class="more" onclick="NextWord()">MORE ></button>
     </div>
     <div class="flexday">
@@ -193,8 +193,38 @@
         const k = document.getElementsByClassName("button");
         for (let e of k) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        function ChangeColor(){
-            const l = document.getElementsByClassName("monthname");
+        function ChangeColor_July(){
+            const l = document.getElementsById("July");
+            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
+        }
+        
+        function ChangeColor_August(){
+            const l = document.getElementsById("August");
+            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
+        }
+        
+        function ChangeColor_September(){
+            const l = document.getElementsById("September");
+            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
+        }
+        
+        function ChangeColor_October(){
+            const l = document.getElementsById("October");
+            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
+        }
+        
+        function ChangeColor_November(){
+            const l = document.getElementsById("November");
+            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
+        }
+        
+        function ChangeColor_December(){
+            const l = document.getElementsById("December");
+            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
+        }
+        
+        function ChangeColor_January(){
+            const l = document.getElementsById("January");
             for (let e of l) { e.style.backgroundColor = secondaryvalue;}
         }
         
