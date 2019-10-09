@@ -3,31 +3,29 @@
 <head>
     <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    
-</link>   
+   
+</link>  
 </head>
 <body>
-
     <div class="flexmonth">
         <div class="dropdown">
             <select class="selectedyear">
-                
-                    <option>2018</option>
-                    <option>2019</option>
-                    <option>2020</option>
+               
+                    <option a href="index.md.html?Year=2018">2018</option>
+                    <option a href="index.md.html?Year=2019">2019</option>
+                    <option a href="index.md.html?Year=2020">2020</option>
                
              </select>
         </div>
-        <div onclick="ChangeColor()" class="monthname" id= "July">July</div>
-        <div onclick="ChangeColor()" class="monthname" id= "August">August</div>
-        <div onclick="ChangeColor()" class="monthname" id= "September">September</div>
-        <div onclick="ChangeColor()" class="monthname" id= "October">October</div>
-        <div onclick="ChangeColor()" class="monthname" id= "November">November</div>
-        <div onclick="ChangeColor()" class="monthname" id= "December">December</div>
-        <div onclick="ChangeColor()" class="monthname" id= "January">January</button>
-        <div class="more" onclick="NextWord()">MORE ></div>
+        <button onclick="ChangeColor" class="monthname" id= "July" a href="index.md.html?Month=July">July</button>
+        <button onclick="ChangeColor" class="monthname" id= "August" a href="index.md.html?Month=August">August</button>
+        <button onclick="ChangeColor" class="monthname" id= "September" a href="index.md.html?Month=September">September</button>
+        <button onclick="ChangeColor" class="monthname" id= "October" a href="index.md.html?Month=Octomber">October</button>
+        <button onclick="ChangeColor" class="monthname" id= "November" a href="index.md.html?Month=November">November</button>
+        <button onclick="ChangeColor" class="monthname" id= "December" a href="index.md.html?Month=December">December</button>
+        <button onclick="ChangeColor" class="monthname" id= "January" a href="index.md.html?Month=January">January</button>
+        <button class="more" onclick="NextWord()">MORE ></button>
     </div>
-
     <div class="flexday">
         <div class="dayname">Sunday</div>
         <div class="dayname">Monday</div>
@@ -37,7 +35,6 @@
         <div class="dayname">Friday</div>
         <div class="dayname">Saturday</div>
     </div>
-
     <div class="flexdate">
         <div class="date1">30</div>
         <div class="daywhite">
@@ -60,7 +57,6 @@
         <div class="date1">6</div>
         <div class="daywhite"></div>
     </div>
-
     <div class="flexdate">
         <div class="date2">7</div>
         <div class="daywhite"></div>
@@ -81,7 +77,6 @@
         <div class="date2">13</div>
         <div class="daywhite"></div>
     </div>
-
     <div class="flexdate">
         <div class="date1">14</div>
         <div class="daywhite"></div>
@@ -100,7 +95,6 @@
         <div class="date1">20</div>
         <div class="daywhite"></div>
     </div>
-
     <div class="flexdate">
         <div class="date2">21</div>
         <div class="daywhite"></div>
@@ -119,7 +113,6 @@
         <div class="date2">27</div>
         <div class="daywhite"></div>
     </div>
-
     <div class="flexdate">
         <div class="date1">28</div>
         <div class="daywhite"></div>
@@ -158,51 +151,67 @@
         }
             return "";
         }
-        
+       
         //get color from cookie and put in variables
         var primaryvalue = getCookie("primary");
         var secondaryvalue = getCookie("secondary");
         var fontvalue = getCookie("font");
         var fontcolorvalue = getCookie("fontcolor");
-        
+       
         //alert(primaryvalue);
         //alert(secondaryvalue);
         //alert(fontvalue);
         //alert(fontcolorvalue);
-        
+       
         const a = document.getElementsByClassName("selectedyear");
         for (let e of a) { e.style.backgroundColor = primaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
-        
+       
         const b = document.getElementsByClassName("selectedmonth");
         for (let e of b) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
-
         const c = document.getElementsByClassName("monthname");
         for (let e of c) { e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
-        
+       
         const d = document.getElementsByClassName("more");
         for (let e of d) { e.style.backgroundColor = primaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
-        
+       
         const f = document.getElementsByClassName("dayname");
         for (let e of f) { e.style.backgroundColor = primaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
-        
+       
         const g = document.getElementsByClassName("date1");
         for (let e of g) { e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
-        
+       
         const h = document.getElementsByClassName("date2");
         for (let e of h) { e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
-        
+       
         const i = document.getElementsByClassName("timebox");
         for (let e of i) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
-        
+       
         const j = document.getElementsByClassName("monthfooter");
         for (let e of j) { e.style.backgroundColor = primaryvalue;}
-        
+       
         const k = document.getElementsByClassName("button");
         for (let e of k) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
-        
        
-        
+        var count = 1;
+        function ChangeColor(btn, color) {
+        var property = document.getElementById(btn);
+            if (count == 0) {
+                property.style.backgroundColor = secondaryvalue;
+                count = 1;        
+            }
+            else {
+                property.style.backgroundColor = "#7FFF00";
+                count = 0;
+            }
+        }
+       
+        var NextWord = (function() {
+        var wordArray = ['January','Febuary','March','April','May','June','July','August','September','October','November','December'];
+        var count = -1;
+        return function() {
+        return wordArray[++count % wordArray.length];
+        }
+        }());
     </script>
-
 </body>
 </html>
