@@ -198,40 +198,24 @@
             l.style.backgroundColor = secondaryvalue;
         }
         
-        /*function ChangeColor_July(){
-            const l = document.getElementsById("July");
-            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
-        }
-        
-        function ChangeColor_August(){
-            const l = document.getElementsById("August");
-            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
-        }
-        
-        function ChangeColor_September(){
-            const l = document.getElementsById("September");
-            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
-        }
-        
-        function ChangeColor_October(){
-            const l = document.getElementsById("October");
-            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
-        }
-        
-        function ChangeColor_November(){
-            const l = document.getElementsById("November");
-            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
-        }
-        
-        function ChangeColor_December(){
-            const l = document.getElementsById("December");
-            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
-        }
-        
-        function ChangeColor_January(){
-            const l = document.getElementsById("January");
-            for (let e of l) { e.style.backgroundColor = secondaryvalue;}
-        }*/
+        let button = document.querySelector("button");
+            button.addEventListener("mousedown", event => {
+            if (event.button == 0) {
+                console.log("July");
+            } else if (event.button == 1) {
+                console.log("August");
+            } else if (event.button == 2) {
+                console.log("September");
+            }else if (event.button == 3) {
+                console.log("October");
+            }else if (event.button == 4) {
+                console.log("November");
+            }else if (event.button == 5) {
+                console.log("December");
+            }else if (event.button == 6) {
+                console.log("January");
+            }
+        });
         
         var NextWord = (function() {
         var wordArray = ['January','Febuary','March','April','May','June','July','August','September','October','November','December'];
