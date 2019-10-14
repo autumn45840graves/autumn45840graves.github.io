@@ -193,29 +193,19 @@
         const k = document.getElementsByClassName("button");
         for (let e of k) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        function ChangeColor(id){
-            const l = document.getElementById(id);
-            l.style.backgroundColor = secondaryvalue;
+        function ChangeColor(selected){
+            const l = document.querySelectorAll("monthname");
+            for l{
+                if (selected = l){
+                    selected.style.backgroundColor = secondaryvalue;
+                }
+                else{
+                    l.style.backgroundColor= #D3D3D3
+                }
+            }     
+                    
         }
         
-        let button = document.querySelector("button");
-            button.addEventListener("mousedown", event => {
-            if (event.button == 0) {
-                console.log("July");
-            } else if (event.button == 1) {
-                console.log("August");
-            } else if (event.button == 2) {
-                console.log("September");
-            }else if (event.button == 3) {
-                console.log("October");
-            }else if (event.button == 4) {
-                console.log("November");
-            }else if (event.button == 5) {
-                console.log("December");
-            }else if (event.button == 6) {
-                console.log("January");
-            }
-        });
         
         var NextWord = (function() {
         var wordArray = ['January','Febuary','March','April','May','June','July','August','September','October','November','December'];
