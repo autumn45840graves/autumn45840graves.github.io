@@ -194,8 +194,8 @@
         for (let e of k) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
         function ChangeColor(selected){
-            const l = document.querySelectorAll("monthname");
-            forEach (var month in l){
+            var obj = document.querySelectorAll("monthname");
+            forEach (var month in obj){
                 if (selected = month){
                     selected.style.backgroundColor = secondaryvalue;
                 }
