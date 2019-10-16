@@ -1,6 +1,4 @@
-        .root{
-            Second_Background_Color: DodgerBlue;
-        }        
+              
 
         .button{
             font-size: 1em;
@@ -67,7 +65,7 @@
         }
 
         .flexmonth input[type="radio"]:focus + label {
-            background-color: var(Second_Background_Color);
+            background-color: var(secondaryvalue);
         }
         
         .flexmonth label:hover {
