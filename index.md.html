@@ -17,14 +17,28 @@
                
              </select>
         </div>
-        <button onclick="ChangeColor('July')" class="monthname" id= "July" >July</button>
-        <button onclick="ChangeColor('August')" class="monthname" id= "August" >August</button>
-        <button onclick="ChangeColor('September')" class="monthname" id= "September" >September</button>
-        <button onclick="ChangeColor('October')" class="monthname" id= "October" >October</button>
-        <button onclick="ChangeColor('November')" class="monthname" id= "November" >November</button>
-        <button onclick="ChangeColor('December')" class="monthname" id= "December" >December</button>
-        <button onclick="ChangeColor('January')" class="monthname" id= "January" >January</button>
-        <button class="more" onclick="NextWord()">MORE ></button>
+        <input type="radio" class="monthname" id= "Month_July" value="July">
+        <label for="Month_July">July</label>
+
+        <input type="radio" class="monthname" id= "Month_August" value="August">
+        <label for="Month_August">August</label>
+        
+        <input type="radio" class="monthname" id= "Month_September" value="September">
+        <label for="Month_September">September</label>
+        
+        <input type="radio" class="monthname" id= "Month_October" value="October">
+        <label for="Month_October">October</label>
+        
+        <input type="radio" class="monthname" id= "Month_November" value="November">
+        <label for="Month_November">November</label>
+        
+        <input type="radio" class="monthname" id= "Month_December" value="December">
+        <label for="Month_December">December</label>
+        
+        <input type="radio" class="monthname" id= "Month_January" value="January">
+        <label for="Month_January">January</label>
+        
+        <div class="more">MORE ></div>
     </div>
     <div class="flexday">
         <div class="dayname">Sunday</div>
@@ -193,27 +207,7 @@
         const k = document.getElementsByClassName("button");
         for (let e of k) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        function ChangeColor(selected){
-            var obj = document.querySelectorAll("monthname");
-            forEach (var month in obj){
-                if (selected = month){
-                    selected.style.backgroundColor = secondaryvalue;
-                }
-                else{
-                    month.style.backgroundColor= #D3D3D3;
-                }
-            }     
-                    
-        }
-        
-        
-        var NextWord = (function() {
-        var wordArray = ['January','Febuary','March','April','May','June','July','August','September','October','November','December'];
-        var count = -1;
-        return function() {
-        return wordArray[++count % wordArray.length];
-        }
-        }());
+
     </script>
 </body>
 </html>
