@@ -17,25 +17,25 @@
                
              </select>
         </div>
-        <input type="radio" class="monthname" id= "Month_July" value="July">
+        <input type="radio" onclick="color" class="monthname" id= "Month_July" value="July">
         <label for="Month_July">July</label>
 
-        <input type="radio" class="monthname" id= "Month_August" value="August">
+        <input type="radio" onclick="color" class="monthname" id= "Month_August" value="August">
         <label for="Month_August">August</label>
         
-        <input type="radio" class="monthname" id= "Month_September" value="September">
+        <input type="radio" onclick="color" class="monthname" id= "Month_September" value="September">
         <label for="Month_September">September</label>
         
-        <input type="radio" class="monthname" id= "Month_October" value="October">
+        <input type="radio" onclick="color" class="monthname" id= "Month_October" value="October">
         <label for="Month_October">October</label>
         
-        <input type="radio" class="monthname" id= "Month_November" value="November">
+        <input type="radio" onclick="color" class="monthname" id= "Month_November" value="November">
         <label for="Month_November">November</label>
         
-        <input type="radio" class="monthname" id= "Month_December" value="December">
+        <input type="radio" onclick="color" class="monthname" id= "Month_December" value="December">
         <label for="Month_December">December</label>
         
-        <input type="radio" class="monthname" id= "Month_January" value="January">
+        <input type="radio" onclick="color" class="monthname" id= "Month_January" value="January">
         <label for="Month_January">January</label>
         
         <div class="more">MORE ></div>
@@ -208,7 +208,10 @@
         const k = document.getElementsByClassName("button");
         for (let e of k) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-
+        function color() {
+            var x = document.querySelectorAll(".flexmonth input[type="radio"]:checked + label");
+            x[0].style.backgroundColor = "red";
+        }
     </script>
 </body>
 </html>
