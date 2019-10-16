@@ -62,12 +62,8 @@
             margin-top: 50px;
         }
 
-        .flexmonth input[type="radio"]:checked + label {
-            background-color:#bfb;
-        }
-
         .flexmonth input[type="radio"]:focus + label {
-            border: 2px dashed #444;
+            background-color:#bfb;
         }
         
         .radio-toolbar label:hover {
