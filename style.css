@@ -63,7 +63,7 @@
         }
 
         .flexmonth input[type="radio"]:focus + label {
-            background-color:#bfb;
+            background-color: DodgerBlue;
         }
         
         .flexmonth label:hover {
