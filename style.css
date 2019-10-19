@@ -1,4 +1,6 @@
-              
+       :root{
+            --label-background-color: DodgerBlue;
+        }      
 
         .button{
             font-size: 1em;
@@ -65,7 +67,7 @@
         }
 
         .flexmonth input[type="radio"]:focus + label {
-            background-color: DodgerBlue;
+            background-color: var(--label-background-color);
         }
         
         .flexmonth label:hover {
@@ -92,6 +94,11 @@
             color: #ffffff;
             border: 1px solid gray;
             text-align: center;
+        }
+        
+        .monthname {
+            color: #ffffff;
+            font-family: "Arial", sans-serif;
         }
 
         .more {
