@@ -181,6 +181,9 @@
         const a = document.getElementsByClassName("selectedyear");
         for (let e of a) { e.style.backgroundColor = primaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
+        const b = document.queryselector("flexmonth input[type="radio"]:focus + label);
+        b.style.backgroundColor = secondaryvalue;
+        
         const c = document.getElementsByClassName("monthname");
         for (let e of c) { e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
        
@@ -205,7 +208,7 @@
         const k = document.getElementsByClassName("button");
         for (let e of k) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        
+       
     </script>
 </body>
 </html>
