@@ -17,25 +17,25 @@
                
              </select>
         </div>
-        <input type="radio" class="monthname" id= "Month_July" value="July">
+        <input type="radio" class="monthname" id= "Month_July" value="July" onselect="setColor(Month_July)">
         <label for="Month_July">July</label>
 
-        <input type="radio" class="monthname" id= "Month_August" value="August">
+        <input type="radio" class="monthname" id= "Month_August" value="August" onselect="setColor(Month_August)">
         <label for="Month_August">August</label>
         
-        <input type="radio" class="monthname" id= "Month_September" value="September">
+        <input type="radio" class="monthname" id= "Month_September" value="September" onselect="setColor(Month_September)">
         <label for="Month_September">September</label>
         
-        <input type="radio" class="monthname" id= "Month_October" value="October">
+        <input type="radio" class="monthname" id= "Month_October" value="October" onselect="setColor(Month_October)">
         <label for="Month_October">October</label>
         
-        <input type="radio" class="monthname" id= "Month_November" value="November">
+        <input type="radio" class="monthname" id= "Month_November" value="November" onselect="setColor(Month_November)">
         <label for="Month_November">November</label>
         
-        <input type="radio" class="monthname" id= "Month_December" value="December">
+        <input type="radio" class="monthname" id= "Month_December" value="December" onselect="setColor(Month_December)">
         <label for="Month_December">December</label>
         
-        <input type="radio" class="monthname" id= "Month_January" value="January">
+        <input type="radio" class="monthname" id= "Month_January" value="January" onselect="setColor(Month_January)">
         <label for="Month_January">January</label>
         
         <div class="more">MORE ></div>
@@ -181,8 +181,7 @@
         const a = document.getElementsByClassName("selectedyear");
         for (let e of a) { e.style.backgroundColor = primaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
         
-        const b = document.queryselector("label");
-        b.style.backgroundColor = secondaryvalue;
+
         
         const c = document.getElementsByClassName("monthname");
         for (let e of c) { e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
@@ -207,6 +206,21 @@
        
         const k = document.getElementsByClassName("button");
         for (let e of k) { e.style.backgroundColor = secondaryvalue; e.style.fontFamily = fontvalue; e.style.color = fontcolorvalue;}
+        
+  
+        function setColor(btn){
+        var count=1;
+        var property = document.getElementById(btn);
+        if (count == 0){
+            property.style.backgroundColor = Secondaryvalue;
+            count=1;        
+        }
+        else{
+            property.style.backgroundColor = "#d3d3d3";
+            count=0;
+        }
+
+        }
         
        
     </script>
